@@ -239,6 +239,9 @@
     .tab.dragging { opacity:0; }
     .tab-placeholder { height:32px; flex:0 0 auto; margin-right:12px; border-radius:6px; background:var(--purple-wash); transition:width .12s ease; }
     .tab-drag-ghost { position:fixed; z-index:20; display:inline-flex; align-items:center; justify-content:center; padding:12px; border:0; border-radius:8px; background:#fff; color:var(--purple); font-size:14px; font-weight:500; white-space:nowrap; pointer-events:none; box-shadow:0 8px 20px rgba(16,24,40,.16); transform:rotate(1deg) scale(1.02); transform-origin:center; }
+    .tutorial-backdrop { position:fixed; inset:0; z-index:7; background:rgba(15,23,42,.14); pointer-events:none; opacity:1; visibility:visible; transition:opacity .16s ease,visibility .16s ease; }
+    .tutorial-backdrop.is-hidden { opacity:0; visibility:hidden; }
+    .tabs-wrap { position:relative; z-index:8; }
 
     .tutorial-popover {
       position:fixed;
@@ -352,6 +355,7 @@
   </style>
 </head>
 <body>
+  <div class="tutorial-backdrop" id="tabTutorialBackdrop" aria-hidden="true"></div>
   <div class="app">
     <nav class="nav-rail" aria-label="Primary navigation">
       <div class="brand-mark" aria-label="Outmarket"><span></span></div>
@@ -547,6 +551,7 @@
     }
 
     const tabTutorial = document.getElementById('tabTutorial');
+    const tabTutorialBackdrop = document.getElementById('tabTutorialBackdrop');
     const workflowNavPopover = document.getElementById('workflowNavPopover');
     let workflowNavHideTimer = null;
 
@@ -608,6 +613,7 @@
 
     function dismissTabTutorial() {
       tabTutorial.classList.add('is-hidden');
+      tabTutorialBackdrop?.classList.add('is-hidden');
     }
 
     function setupTabTutorial() {
