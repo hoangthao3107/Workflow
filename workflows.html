@@ -117,7 +117,7 @@
       flex-direction:column;
       align-items:flex-start;
       border-radius:16px;
-      background:#1B1D1D;
+      background:var(--canvas);
       box-shadow:0 0 24px rgba(16,24,40,.18);
       opacity:0;
       visibility:hidden;
@@ -134,12 +134,12 @@
       width:16px;
       height:16px;
       border-radius:3px;
-      background:#1B1D1D;
+      background:var(--canvas);
       transform:rotate(45deg);
     }
     .workflow-nav-popover.is-visible { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(0); }
-    .workflow-nav-popover h2 { position:relative; z-index:1; margin:0 0 4px; font-size:18px; line-height:28px; font-weight:600; color:#F5F5F6; }
-    .workflow-nav-popover p { position:relative; z-index:1; margin:0; font-size:14px; line-height:20px; color:#CECFD2; }
+    .workflow-nav-popover h2 { position:relative; z-index:1; margin:0 0 4px; font-size:18px; line-height:28px; font-weight:600; color:var(--ink); }
+    .workflow-nav-popover p { position:relative; z-index:1; margin:0; font-size:14px; line-height:20px; color:var(--muted); }
     .workflow-nav-popover button { position:relative; z-index:1; align-self:flex-end; height:40px; margin-top:16px; padding:8px 16px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--muted); font-size:14px; font-weight:500; }
     .workflow-nav-popover button:hover { background:#f5f6f7; }
 
@@ -244,8 +244,8 @@
       position:fixed;
       z-index:8;
       width:360px;
-      color:#F5F5F6;
-      background:#1B1D1D;
+      color:var(--ink);
+      background:var(--canvas);
       border-radius:16px;
       box-shadow:0 0 24px rgba(16,24,40,.18);
       overflow:visible;
@@ -259,15 +259,15 @@
       width:16px;
       height:16px;
       border-radius:3px;
-      background:#1B1D1D;
+      background:var(--canvas);
       transform:rotate(45deg);
     }
     .tutorial-popover.is-hidden { display:none; }
     .tutorial-media { position:relative; z-index:1; padding:8px 8px 0; }
     .tutorial-media video { position:relative; z-index:1; display:block; width:100%; height:auto; object-fit:contain; border:1px solid var(--line); border-radius:8px; background:rgba(255,255,255,.65); }
     .tutorial-body { display:flex; flex-direction:column; align-items:flex-start; gap:4px; padding:20px; position:relative; z-index:1; }
-    .tutorial-title { margin:0; font-size:18px; line-height:28px; font-weight:600; color:#F5F5F6; }
-    .tutorial-copy { margin:0; font-size:14px; line-height:20px; color:#CECFD2; }
+    .tutorial-title { margin:0; font-size:18px; line-height:28px; font-weight:600; color:var(--ink); }
+    .tutorial-copy { margin:0; font-size:14px; line-height:20px; color:var(--muted); }
     .tutorial-done { align-self:flex-end; height:40px; margin-top:16px; padding:8px 16px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--muted); font-size:14px; font-weight:500; }
     .tutorial-done:hover { background:#f5f6f7; }
 
